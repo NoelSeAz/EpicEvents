@@ -1,0 +1,222 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    color: white;
+    background: black;
+}
+
+h1{
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Pacifico';
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.fullscreen-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    background: black url('nightsky.jpg') repeat;
+}
+
+.circle {
+    width: 300px;
+    height: 300px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 50%;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px 5px rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.about-container {
+    animation: zoomIn 1s ease-out forwards;
+    text-align: center;
+    position: relative;
+    height: 100%;
+    background: black url('nightsky.jpg') repeat;
+}
+
+.main-frame {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(0, -50%);
+}
+
+.sphere {
+    display: inline-block;
+    margin: 20px;
+    vertical-align: top;
+    margin-bottom: 100px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+}
+
+.sphere:hover {
+    box-shadow: 0 0 15px 5px rgb(255, 255, 255);
+}
+
+.sphere img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+#contactButton {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-background {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+    color: black;
+}
+
+#contact-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-page .contact-container {
+    width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px; /* Añadir margen para evitar que el formulario toque los bordes */
+}
+
+#contact-page .contact-container h1 {
+    text-align: center;
+}
+
+#contact-page .contact-container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Asegurar que el formulario ocupe todo el ancho del contenedor */
+}
+
+#contact-page .contact-container label {
+    margin-bottom: 5px;
+}
+
+#contact-page .contact-container input[type="text"],
+#contact-page .contact-container input[type="email"],
+#contact-page .contact-container textarea {
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Asegurar que los campos ocupen todo el ancho del formulario */
+}
+
+#contact-page .contact-container button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Asegurar que los botones ocupen todo el ancho del formulario */
+    margin-bottom: 10px;
+}
+
+#contact-page .contact-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Nuevo estilo para el botón "volver" */
+#contact-page .contact-container .backButton {
+    background-color: grey;
+    color: white;
+    margin-top: 10px;
+}
+
+#contact-page .contact-container .backButton:hover {
+    background-color: #606060;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    /* Estilos para tablet */
+    .circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .sphere {
+        width: 80px;
+        height: 80px;
+    }
+
+    #contact-page .contact-container {
+        padding: 50px; 
+    }
+}
+
+@media (max-width: 768px) {
+    /* Estilos para móvil */
+    .main-frame {
+        left: 20%;
+    }
+
+    .circle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .sphere {
+        width: 60px;
+        height: 60px;
+    }
+
+    #contact-page .contact-container {
+        padding: 30px;
+        width: 350px;
+    }
+}

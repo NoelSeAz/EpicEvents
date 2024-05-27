@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - Let's Epic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="about-container">
+        <div class="main-frame">
+            <div class="title"><h1>LET'S EPIC</h1></div>
+            <div class="sphere" id="sphere1" onclick="showModal('sphere1')"><img src="mision.png" alt="Misión"></div>
+            <div class="sphere" id="sphere2" onclick="showModal('sphere2')"><img src="equipo.png" alt="Equipo"></div>
+            <div class="sphere" id="sphere3" onclick="showModal('sphere3')"><img src="historia.png" alt="Historia"></div>                       
+            <div><button id="contactButton">Contacto</button></div>
+        </div>
+    </div>
+
+    <!-- El pop-up (oculto por defecto) -->
+    <div id="modalBackground" class="modal-background" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalText">Aquí va el texto del pop-up.</p>
+        </div>
+    </div> 
+
+    <script src="scripts.js"></script>
+</body>
+</html>
